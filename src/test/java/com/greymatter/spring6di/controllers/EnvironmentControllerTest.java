@@ -1,22 +1,22 @@
-package com.greymatter.spring6di.controllers.i18n;
+package com.greymatter.spring6di.controllers;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.stereotype.Controller;
 import org.springframework.test.context.ActiveProfiles;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@ActiveProfiles({"EN","dev"})
+@ActiveProfiles({"dev", "EN"})
 @SpringBootTest
-class myi18NControllerTestEN {
+class EnvironmentControllerTest {
 
     @Autowired
-    Myi18NController myi18NController;
+    EnvironmentController environmentController;
 
     @Test
-    void sayHello() {
-
-        System.out.println(myi18NController.sayHello());
+    void getEnvironMent() {
+        System.out.println(environmentController.getEnvironment());
     }
 }
